@@ -1,9 +1,11 @@
 import React from 'react';
-import NotImplemented from "../components/errors/NotImplemented";
+import Page from "../components/Page";
 
 function Crash(props) {
     return (
-        <NotImplemented/>
+        <Page title={"Crash"}>
+            This page has not yet been implemented.
+        </Page>
     );
 }
 

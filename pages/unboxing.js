@@ -1,9 +1,11 @@
 import React from 'react';
-import NotImplemented from "../components/errors/NotImplemented";
+import Page from "../components/Page";
 
 function Unboxing(props) {
     return (
-        <NotImplemented/>
+        <Page title={"Unboxing"}>
+            This page has not yet been implemented.
+        </Page>
     );
 }
 
