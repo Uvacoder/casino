@@ -42,7 +42,7 @@ function Sidebar(props) {
                 </Link>
             </div>
 
-            {links.map(({title, link, icon}) => <SidebarLink title={title} link={link} icon={icon}/>)}
+            {links.map(({title, link, icon}, i) => <SidebarLink key={i} title={title} link={link} icon={icon}/>)}
 
             <div className={"flex flex-1"}/>
             <Link href={"/auth/logout"} passHref>

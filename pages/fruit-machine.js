@@ -86,8 +86,9 @@ function FruitMachine(props) {
                 credits > 0 && <div className={"flex flex-col justify-center items-center"}>
                     <div>Credits: {credits}</div>
 
-                    <div className={"flex flex-row gap-2 text-5xl p-8"}>{rolled.map((option) =>
-                        <div>{option}</div>)}</div>
+                    <div className={"flex flex-row gap-2 text-5xl p-8"}>{rolled.map((option, i) =>
+                        <div key={i}>{option}</div>
+                    )}</div>
 
                     <div className={"flex flex-row gap-2"}>
                         <button className={"bg-blue-600 hover:bg-blue-700 py-2 w-24 px-4 rounded"} onClick={roll}>Roll
