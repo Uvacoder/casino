@@ -2,14 +2,14 @@ import React, {useState} from 'react';
 import {useRouter} from "next/router";
 import Link from "next/link";
 
-function SidebarLink({key, title, link, icon}) {
+function SidebarLink({title, link, icon}) {
     let router = useRouter()
     const [triggered, setTriggered] = useState(false);
 
     return (
         <div className={`flex flex-row h-16 w-16 justify-center items-center border-r ${router.pathname === link ? "border-blue-600" : "border-transparent"}`}>
             <Link href={link} passHref>
-                <a className={`text-gray-100 hover:text-gray-300 transition h-12 w-12`}
+                <a className={`transition h-12 w-12 ${router.pathname === link ? "text-blue-700 hover:text-blue-800" : "text-gray-100 hover:text-gray-300" }`}
                    onMouseOver={() => setTriggered(true)} onMouseLeave={() => setTriggered(false)}>
                     {icon}
                 </a>

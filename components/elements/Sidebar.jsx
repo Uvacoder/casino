@@ -35,21 +35,8 @@ let links = [
 
 function Sidebar(props) {
     return (
-        <div className={"fixed flex flex-col items-center min-h-screen w-16 bg-gray-800 p-2 gap-2"}>
-            <div className={"flex w-16 h-16 mb-4 items-center justify-center"}>
-                <Link href={"/"} passHref>
-                    <a><AcademicCapIcon className={"text-blue-900 h-14 w-14"}/></a>
-                </Link>
-            </div>
-
+        <div className={"fixed flex flex-col items-center min-h-screen w-16 bg-gray-800 gap-2 border-r border-gray-700"}>
             {links.map(({title, link, icon}, i) => <SidebarLink key={i} title={title} link={link} icon={icon}/>)}
-
-            <div className={"flex flex-1"}/>
-            <Link href={"/auth/logout"} passHref>
-                <a>
-                    <ArrowRightOnRectangleIcon className={"text-gray-100 hover:text-gray-300 transition h-12 w-12"}/>
-                </a>
-            </Link>
         </div>
     );
 }
